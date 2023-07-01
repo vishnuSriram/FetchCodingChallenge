@@ -20,6 +20,14 @@ struct DetailView: View {
     var body: some View {
         NavigationView {
             Form {
+                // Gives user a little taste of the recipe they might want to embark on!
+                Section("Finished Product") {
+                    AsyncImage(url: URL(string: meal.strMealThumb), scale: 3) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView().progressViewStyle(.circular)
+                    }
+                }
                 Section("Instructions") {
                     Text(mealDetail.strInstructions!.isEmpty ? "Loading..." : mealDetail.strInstructions!)
                 }

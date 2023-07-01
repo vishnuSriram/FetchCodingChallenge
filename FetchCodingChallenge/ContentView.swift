@@ -30,6 +30,7 @@ struct ContentView: View {
             */
             .sheet(item: $viewModel.selectedMeal) { meal in
                 DetailView(meal: meal)
+                    .presentationDetents([.medium, .large])
             }
             .navigationTitle("Dessert Recipes")
         }
