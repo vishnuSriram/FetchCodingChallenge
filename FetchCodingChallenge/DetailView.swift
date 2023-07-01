@@ -22,7 +22,7 @@ struct DetailView: View {
             Form {
                 // Gives user a little taste of the recipe they might want to embark on!
                 Section("Finished Product") {
-                    AsyncImage(url: URL(string: meal.strMealThumb), scale: 3) { image in
+                    AsyncImage(url: URL(string: meal.strMealThumb), scale: 3.5) { image in
                         image.resizable()
                     } placeholder: {
                         ProgressView().progressViewStyle(.circular)
