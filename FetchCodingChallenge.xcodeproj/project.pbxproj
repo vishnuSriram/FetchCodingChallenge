@@ -11,6 +11,12 @@
 		078DE1E52A4F7DC9008871D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE1E42A4F7DC9008871D0 /* ContentView.swift */; };
 		078DE1E72A4F7DCA008871D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078DE1E62A4F7DCA008871D0 /* Assets.xcassets */; };
 		078DE1EA2A4F7DCA008871D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078DE1E92A4F7DCA008871D0 /* Preview Assets.xcassets */; };
+		078DE20B2A4F8E6F008871D0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE20A2A4F8E6F008871D0 /* DetailView.swift */; };
+		078DE20F2A4F90BB008871D0 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE20E2A4F90BB008871D0 /* ContentView-ViewModel.swift */; };
+		078DE2112A4F9537008871D0 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE2102A4F9537008871D0 /* Meal.swift */; };
+		078DE2132A4F961C008871D0 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE2122A4F961C008871D0 /* MealResponse.swift */; };
+		078DE2152A4F9628008871D0 /* MealDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE2142A4F9628008871D0 /* MealDetailResponse.swift */; };
+		078DE2172A4F9649008871D0 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078DE2162A4F9649008871D0 /* MealDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		078DE1E42A4F7DC9008871D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		078DE1E62A4F7DCA008871D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078DE1E92A4F7DCA008871D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		078DE20A2A4F8E6F008871D0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		078DE20E2A4F90BB008871D0 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		078DE2102A4F9537008871D0 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		078DE2122A4F961C008871D0 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
+		078DE2142A4F9628008871D0 /* MealDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailResponse.swift; sourceTree = "<group>"; };
+		078DE2162A4F9649008871D0 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 			children = (
 				078DE1E22A4F7DC9008871D0 /* FetchCodingChallengeApp.swift */,
 				078DE1E42A4F7DC9008871D0 /* ContentView.swift */,
+				078DE20E2A4F90BB008871D0 /* ContentView-ViewModel.swift */,
+				078DE20A2A4F8E6F008871D0 /* DetailView.swift */,
+				078DE2102A4F9537008871D0 /* Meal.swift */,
+				078DE2162A4F9649008871D0 /* MealDetail.swift */,
+				078DE2122A4F961C008871D0 /* MealResponse.swift */,
+				078DE2142A4F9628008871D0 /* MealDetailResponse.swift */,
 				078DE1E62A4F7DCA008871D0 /* Assets.xcassets */,
 				078DE1E82A4F7DCA008871D0 /* Preview Content */,
 			);
@@ -137,7 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078DE2112A4F9537008871D0 /* Meal.swift in Sources */,
+				078DE2152A4F9628008871D0 /* MealDetailResponse.swift in Sources */,
 				078DE1E52A4F7DC9008871D0 /* ContentView.swift in Sources */,
+				078DE20F2A4F90BB008871D0 /* ContentView-ViewModel.swift in Sources */,
+				078DE2132A4F961C008871D0 /* MealResponse.swift in Sources */,
+				078DE2172A4F9649008871D0 /* MealDetail.swift in Sources */,
+				078DE20B2A4F8E6F008871D0 /* DetailView.swift in Sources */,
 				078DE1E32A4F7DC9008871D0 /* FetchCodingChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +299,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(viewModel.sortedMeals, id: \.idMeal) { meal in
+                VStack(alignment: .leading) {
+                    Text(meal.strMeal)
+                        .font(.headline)
+                }
+                .onTapGesture {
+                    viewModel.selectedMeal = meal
+                }
+            }
+            .task {
+                await viewModel.loadMealData()
+            }
+            /*
+             A sheet view that you can easily dismiss by swiping down will be ideal here!
+            */
+            .sheet(item: $viewModel.selectedMeal) { meal in
+                DetailView(meal: meal)
+            }
+            .navigationTitle("Dessert Recipes")
         }
-        .padding()
     }
 }
 
