@@ -21,6 +21,7 @@ struct ContentView: View {
                     viewModel.selectedMeal = meal
                 }
             }
+            .environment(\.defaultMinListRowHeight, 75)
             .task {
                 await viewModel.loadMealData()
             }
