@@ -13,7 +13,7 @@ struct Meal: Codable, Identifiable, Equatable {
     var idMeal: String
     var strMeal: String
     
-    // First meal in API as example
+    // First Meal in API as example
     static let example = Meal(idMeal: "53049", strMeal: "Apam balik")
     
     static func == (lhs: Meal, rhs: Meal) -> Bool {

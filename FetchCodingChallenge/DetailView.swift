@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct DetailView: View {
-    var meal: Meal
+    @Environment(\.dismiss) var dismiss
     
-    @State private var ingredients = [String]()
-    @State private var measurements = [String]()
+    var meal: Meal
+
+    @State private var ingredients = [String?]()
+    @State private var measurements = [String?]()
     @State private var ingredientsList = [String]()
     @State private var mealDetail = MealDetail.example
 
@@ -19,7 +21,7 @@ struct DetailView: View {
         NavigationView {
             Form {
                 Section("Instructions") {
-                    Text(mealDetail.strInstructions.isEmpty ? "Loading..." : mealDetail.strInstructions)
+                    Text(mealDetail.strInstructions!.isEmpty ? "Loading..." : mealDetail.strInstructions!)
                 }
                 Section("Ingredients List") {
                     if ingredientsList.isEmpty {
@@ -33,6 +35,11 @@ struct DetailView: View {
                 }
             }
             .navigationTitle(meal.strMeal)
+            .toolbar() {
+                Button("Done") {
+                    dismiss()
+                }
+            }
         }
         .task {
             await loadMealDetailData(id: meal.idMeal)
@@ -46,8 +53,8 @@ struct DetailView: View {
     func createIngredientsList() {
         // Only hard-coding this here because the API is designed to always return 20 ingredients and measurements
         for i in 0...19 {
-            if !ingredients[i].isEmpty && !measurements[i].isEmpty {
-                ingredientsList.append("\(ingredients[i]): \(measurements[i])")
+            if !(ingredients[i] ?? "").isEmpty && !(measurements[i] ?? "").isEmpty {
+                ingredientsList.append("\(ingredients[i]!): \(measurements[i]!)")
             }
         }
     }
@@ -116,7 +123,7 @@ struct DetailView: View {
             let (data, _) = try await URLSession.shared.data(from: url)
             
             /*
-             Note: There might be some bad data in the API, at least with "Apple Frangipan Tart" as well as "Bakewell Tart" - not sure why, the HTTP response appears to be successful.
+                See FetchCodingChallengeSlowTests to see if HTTP response is successful in returning a code of 200.
              */
             if let decodedMealDetailResponse = try? JSONDecoder().decode(MealDetailResponse.self, from: data) {
                 // Assuming we only need to decode the 1st meal detail
