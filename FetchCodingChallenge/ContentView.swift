@@ -25,7 +25,7 @@ struct ContentView: View {
                 await viewModel.loadMealData()
             }
             /*
-             A sheet view that you can easily dismiss by swiping down will be ideal here!
+             A sheet view that you can easily dismiss by swiping down is ideal here!
             */
             .sheet(item: $viewModel.selectedMeal) { meal in
                 DetailView(meal: meal)

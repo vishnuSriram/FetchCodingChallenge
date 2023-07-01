@@ -51,7 +51,7 @@ struct DetailView: View {
     }
     
     func createIngredientsList() {
-        // Only hard-coding this here because the API is designed to always return 20 ingredients and measurements
+        // Only hard-coding the loop range here because the API is designed to always return 20 ingredients and measurements
         for i in 0...19 {
             if !(ingredients[i] ?? "").isEmpty && !(measurements[i] ?? "").isEmpty {
                 ingredientsList.append("\(ingredients[i]!): \(measurements[i]!)")
@@ -123,10 +123,10 @@ struct DetailView: View {
             let (data, _) = try await URLSession.shared.data(from: url)
             
             /*
-                See FetchCodingChallengeSlowTests to see if HTTP response is successful in returning a code of 200.
+                See FetchCodingChallengeSlowTests to see if HTTP response is successful.
              */
             if let decodedMealDetailResponse = try? JSONDecoder().decode(MealDetailResponse.self, from: data) {
-                // Assuming we only need to decode the 1st meal detail
+                // Assume we only need to display 1 meal detail in our view
                 mealDetail = decodedMealDetailResponse.meals[0]
                 loadIngredients()
                 loadMeasurements()

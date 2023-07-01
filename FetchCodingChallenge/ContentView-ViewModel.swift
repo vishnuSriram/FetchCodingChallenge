@@ -14,7 +14,7 @@ extension ContentView {
         @Published var selectedMeal: Meal?
         
         /*
-            See FetchCodingChallengeSlowTests to see if HTTP response is successful in returning a code of 200.
+            See FetchCodingChallengeSlowTests to see if HTTP response is successful.
          */
         func loadMealData() async {
             guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else {
