@@ -64,6 +64,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0722A6942A527B4C002F7843 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				078DE2102A4F9537008871D0 /* Meal.swift */,
+				078DE2162A4F9649008871D0 /* MealDetail.swift */,
+				078DE2122A4F961C008871D0 /* MealResponse.swift */,
+				078DE2142A4F9628008871D0 /* MealDetailResponse.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0722A6952A527B60002F7843 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				078DE1E42A4F7DC9008871D0 /* ContentView.swift */,
+				078DE20A2A4F8E6F008871D0 /* DetailView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0722A6962A527B7F002F7843 /* view-models */ = {
+			isa = PBXGroup;
+			children = (
+				078DE20E2A4F90BB008871D0 /* ContentView-ViewModel.swift */,
+			);
+			path = "view-models";
+			sourceTree = "<group>";
+		};
 		078DE1D62A4F7DC9008871D0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,13 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				078DE1E22A4F7DC9008871D0 /* FetchCodingChallengeApp.swift */,
-				078DE1E42A4F7DC9008871D0 /* ContentView.swift */,
-				078DE20E2A4F90BB008871D0 /* ContentView-ViewModel.swift */,
-				078DE20A2A4F8E6F008871D0 /* DetailView.swift */,
-				078DE2102A4F9537008871D0 /* Meal.swift */,
-				078DE2162A4F9649008871D0 /* MealDetail.swift */,
-				078DE2122A4F961C008871D0 /* MealResponse.swift */,
-				078DE2142A4F9628008871D0 /* MealDetailResponse.swift */,
+				0722A6952A527B60002F7843 /* views */,
+				0722A6962A527B7F002F7843 /* view-models */,
+				0722A6942A527B4C002F7843 /* models */,
 				078DE1E62A4F7DCA008871D0 /* Assets.xcassets */,
 				078DE1E82A4F7DCA008871D0 /* Preview Content */,
 			);
