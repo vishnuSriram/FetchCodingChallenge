@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchDessert" */;
+			buildConfigurationList = 078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchCodingChallenge" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -488,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchDessert" */ = {
+		078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchCodingChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078DE1EB2A4F7DCA008871D0 /* Debug */,
