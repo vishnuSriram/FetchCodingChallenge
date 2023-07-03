@@ -8,7 +8,9 @@
 import Foundation
 
 struct Meal: Codable, Identifiable, Equatable {
-    // Using a computed property to return idMeal as the ID
+    /*
+     Using a computed property to return idMeal as the ID to conform to Identifiable protocol
+     */
     var id: String { idMeal }
     var idMeal: String
     var strMeal: String
