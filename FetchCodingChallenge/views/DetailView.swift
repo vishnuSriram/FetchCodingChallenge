@@ -59,7 +59,9 @@ struct DetailView: View {
     }
     
     func createIngredientsList() {
-        // Only hard-coding the loop range here because the API is designed to always return 20 ingredients and measurements
+        /*
+         Only hard-coding the loop range here because the API is designed to always return 20 ingredients and measurements
+        */
         for i in 0...19 {
             if !(ingredients[i] ?? "").isEmpty && !(measurements[i] ?? "").isEmpty {
                 ingredientsList.append("\(ingredients[i]!): \(measurements[i]!)")

@@ -14,7 +14,7 @@ extension ContentView {
         @Published var selectedMeal: Meal?
         
         /*
-            See FetchCodingChallengeSlowTests to see if HTTP response is successful.
+         See FetchCodingChallengeSlowTests to see if HTTP response is successful.
          */
         func loadMealData() async {
             guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else {
@@ -27,7 +27,8 @@ extension ContentView {
                             
                 if let decodedMealResponse = try? JSONDecoder().decode(MealResponse.self, from: data) {
                     meals = decodedMealResponse.meals
-                    /* The meals in the API response are already sorted alphabetically, but for the sake of alphabetizing the meals for practice, let's randomize them, then alphabetize them!
+                    /*
+                     The meals in the API response are already sorted alphabetically, but for the sake of alphabetizing the meals for practice, let's randomize them, then alphabetize them!
                      */
                     let randomizedMeals = meals.shuffled()
                     sortedMeals = randomizedMeals.sorted(by: { $0.strMeal < $1.strMeal })
