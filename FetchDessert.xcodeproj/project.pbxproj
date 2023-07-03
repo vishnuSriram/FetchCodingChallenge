@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchCodingChallenge" */;
+			buildConfigurationList = 078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchDessert" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -394,6 +394,8 @@
 				DEVELOPMENT_TEAM = FTZ6LB3GZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Dessert";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +426,8 @@
 				DEVELOPMENT_TEAM = FTZ6LB3GZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Dessert";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchCodingChallenge" */ = {
+		078DE1DA2A4F7DC9008871D0 /* Build configuration list for PBXProject "FetchDessert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078DE1EB2A4F7DCA008871D0 /* Debug */,
